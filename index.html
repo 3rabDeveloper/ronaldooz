@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronaldo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #f94144;
+      --secondary-color: #f9c74f;
+      --bg-color: #fdf5f5;
+      --text-color: #333;
+      --border-radius: 15px;
+      --transition-speed: 0.3s;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      padding: 1.5rem;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background: var(--secondary-color);
+      border-radius: var(--border-radius);
+      transition: background var(--transition-speed), transform var(--transition-speed);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .services li:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateX(10px);
+    }
+
+    .services li i {
+      color: var(--text-color);
+      font-size: 1.2rem;
+      transition: color var(--transition-speed);
+    }
+
+    .services li:hover i {
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: var(--secondary-color);
+      margin-top: 2rem;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+      transition: color var(--transition-speed);
+    }
+
+    footer a:hover {
+      color: var(--primary-color);
+    }
+
+    .lang-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .lang-toggle:hover {
+      background-color: var(--secondary-color);
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body lang="ar" dir="rtl">
+  <button class="lang-toggle" onclick="toggleLanguage()">English</button>
+  <header>
+    <h1>أهلا بكم!</h1>
+    <p>أنا يوسف، المدعي برونالدو. تاجر ومبرمج وصانع بوتات وخوادم. يمكنك الوثوق بي!</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>خدماتي</h2>
+      <div class="services">
+        <ul>
+          <li><i class="fas fa-server"></i> خوادم</li>
+          <li><i class="fas fa-robot"></i> بوتات</li>
+          <li><i class="fas fa-users"></i> سيرفرات</li>
+          <li><i class="fas fa-gift"></i> نيترو</li>
+          <li><i class="fas fa-user-circle"></i> حسابات</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>خبراتي</h2>
+      <p><i class="fas fa-briefcase"></i> توليت مسؤولية العديد من السيرفرات مثل Everton و ABGaming و East و Jewel و Istanbul. وكنت أمتلك سيرفراً خاصاً بي باسم Nitro Stock.</p>
+    </div>
+
+    <div class="card">
+      <h2>تواصل معي</h2>
+      <p><i class="fab fa-whatsapp"></i> واتساب: +50941549968</p>
+      <p><i class="fab fa-discord"></i> ديسكورد: 5m6d</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>شكراً لزيارتكم!</p>
+    <p><a href="#"><i class="fas fa-arrow-up"></i> العودة للأعلى</a></p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        headerTitle: "Welcome!",
+        headerDescription: "I'm Youssef, known as Ronaldo. A trader, programmer, and bot/server creator. You can trust me!",
+        servicesTitle: "My Services",
+        services: [
+          "Servers",
+          "Bots",
+          "Custom Servers",
+          "Nitro",
+          "Accounts"
+        ],
+        experienceTitle: "My Expertise",
+        experienceDescription:
+          "I've managed many servers such as Everton, ABGaming, East, Jewel, and Istanbul. I also owned a private server called Nitro Stock.",
+        contactTitle: "Contact Me",
+        contactWhatsApp: "WhatsApp: +50941549968",
+        contactDiscord: "Discord: 5m6d",
+        footer: "Thank you for visiting!",
+        backToTop: "Back to Top"
+      },
+      ar: {
+        headerTitle: "أهلا بكم!",
+        headerDescription: "أنا يوسف، المدعي برونالدو. تاجر ومبرمج وصانع بوتات وخوادم. يمكنك الوثوق بي!",
+        servicesTitle: "خدماتي",
+        services: [
+          "خوادم",
+          "بوتات",
+          "سيرفرات",
+          "نيترو",
+          "حسابات"
+        ],
+        experienceTitle: "خبراتي",
+        experienceDescription:
+          "توليت مسؤولية العديد من السيرفرات مثل Everton و ABGaming و East و Jewel و Istanbul. وكنت أمتلك سيرفراً خاصاً بي باسم Nitro Stock.",
+        contactTitle: "تواصل معي",
+        contactWhatsApp: "واتساب: +50941549968",
+        contactDiscord: "ديسكورد: 5m6d",
+        footer: "شكراً لزيارتكم!",
+        backToTop: "العودة للأعلى"
+      }
+    };
+
+    const toggleLanguage = () => {
+      const currentLang = document.body.lang;
+      const newLang = currentLang === "ar" ? "en" : "ar";
+      const translation = translations[newLang];
+
+      document.body.lang = newLang;
+      document.body.dir = newLang === "ar" ? "rtl" : "ltr";
+      document.querySelector("header h1").textContent = translation.headerTitle;
+      document.querySelector("header p").textContent = translation.headerDescription;
+
+      const serviceItems = document.querySelectorAll(".services li");
+      serviceItems.forEach((item, index) => {
+        item.textContent = "";
+        const icon = document.createElement("i");
+        icon.className = item.querySelector("i").className;
+        item.appendChild(icon);
+        item.append(` ${translation.services[index]}`);
+      });
+
+      document.querySelector(".card:nth-child(2) h2").textContent = translation.experienceTitle;
+      document.querySelector(".card:nth-child(2) p").textContent = translation.experienceDescription;
+
+      document.querySelector(".card:nth-child(3) h2").textContent = translation.contactTitle;
+      const contactItems = document.querySelectorAll(".card:nth-child(3) p");
+      contactItems[0].textContent = translation.contactWhatsApp;
+      contactItems[1].textContent = translation.contactDiscord;
+
+      document.querySelector("footer p").textContent = translation.footer;
+      document.querySelector("footer a").textContent = translation.backToTop;
+    };
+  </script>
+</body>
+</html>
